@@ -1,0 +1,26 @@
+<div>
+    
+    <li *ngFor=" let menu of data">
+        <div *ngIf="!menu.submenu" >
+            {{menu.name}}
+        </div>
+        <div *ngIf="menu.submenu">
+            
+
+        
+            <accordion
+    
+                [menus]="[menu.submenu]">
+                        <app-tree-view [data]="[menu.submenu][0].submenu"></app-tree-view>
+
+</accordion>
+
+
+
+        
+           
+        
+        </div>
+        
+    </li>
+</div>

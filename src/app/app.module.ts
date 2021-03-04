@@ -3,10 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AccordionComponent } from './accordion/accordion.component';
+import { TreeViewComponent } from './tree-view/tree-view.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AccordionComponent,
+    TreeViewComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,17 @@
+<ul id="accordion" class="accordion" >
+    <li [class.active]="menus[0].active">
+      <div class="menu" (click)="toggle2()">
+        {{menus[0].name}}
+        <i [class]="menus[0].iconClass"></i>
+        <i class="fa fa-chevron-down"></i>
+      </div>
+      <ul class="submenu" #submenu
+      [style.height.px]="menus[0].active ? submenu.scrollHeight : 0">
+      <li>
+        <ng-content>
+          
+        </ng-content>
+        </li>
+      </ul>
+    </li>
+</ul>
