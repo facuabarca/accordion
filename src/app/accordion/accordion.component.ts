@@ -8,7 +8,7 @@ import { Config, Menu } from './types';
 })
 export class AccordionComponent implements OnInit {
   @Input() options;
-  @Input() menus: any;
+  @Input() menus: Menu<any>[];
   config: Config;
   
   ngOnInit() {
@@ -26,15 +26,15 @@ export class AccordionComponent implements OnInit {
   }
 
   toggle(index: number) {
+    // 멀티 오픈을 허용하지 않으면 타깃 이외의 모든 submenu를 클로즈한다.
+    console.log(this.config);
     if (!this.config.multi) {
       this.menus.filter(
         (menu, i) => i !== index && menu.active
       ).forEach(menu => menu.active = !menu.active);
     }
-    this.menus[0].active = !this.menus[0].active;
-  }
 
-  toggle2() {
-    this.menus[0].active = !this.menus[0].active;
+    // Menu의 active를 반전
+    this.menus[index].active = !this.menus[index].active;
   }
 }

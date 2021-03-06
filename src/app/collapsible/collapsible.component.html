@@ -1,0 +1,14 @@
+<ul id="accordion" class="accordion" >
+  <li
+    [class.active]="menu.active">
+    <div class="menu" (click)="toggle()">
+      <i [class]="menu.iconClass"></i>
+      {{ menu.name }}
+      <i class="fa fa-chevron-down"></i>
+    </div>
+    <ul class="submenu" #submenu 
+      [style.height.px]="menu.active ? submenu.scrollHeight : 0">
+      <ng-container [ngTemplateOutlet]="template"></ng-container>
+    </ul>
+  </li>
+</ul>

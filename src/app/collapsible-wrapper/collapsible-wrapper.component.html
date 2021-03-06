@@ -1,0 +1,16 @@
+
+<div
+  class="collapsible-container"
+  *ngFor="let collappse of collapsibleWrapper.childrens; let i = index;">
+  
+    <app-collapsible
+      [menu]="collappse"
+      (toggleEvent)="toggle(i)">
+      
+      <ng-template>
+        <ng-container [ngTemplateOutlet]="templateWrapper"></ng-container>
+      </ng-template>
+    </app-collapsible>
+</div>
+
+

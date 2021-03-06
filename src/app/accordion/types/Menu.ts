@@ -1,8 +1,8 @@
-export interface Menu {
+export interface Menu<T> {
     name: string, 
     iconClass: string, 
     active: boolean,
-    submenu: Category[]
+    submenu: T
 }
 
 export interface Category {
