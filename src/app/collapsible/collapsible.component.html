@@ -8,7 +8,9 @@
     </div>
     <ul class="submenu" #submenu 
       [style.height.px]="menu.active ? submenu.scrollHeight : 0">
-      <ng-container [ngTemplateOutlet]="template"></ng-container>
+      <ng-container [ngTemplateOutlet]="template">
+        
+      </ng-container>
     </ul>
   </li>
 </ul>

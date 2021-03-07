@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Config, Menu, Category } from './accordion/types';
+import { Config, Menu } from './collapsible/types';
 
 @Component({
   selector: 'app-root',
@@ -61,34 +61,6 @@ export class AppComponent implements OnInit {
     
   }
 
-  // formatToMenuAccordion(type: any): Menu {
 
-  //   if (type.subcategories?.length > 0) {
-
-  //     type.subcategories = type.subcategories.map((cat: any) => {
-  //       if (cat.subcategories?.length > 0) {
-  //         return {
-  //           name: cat.name,
-  //           active: false,
-  //           iconClass: 'fa fa-code',
-  //           submenu: this.formatToMenuAccordion(cat.subcategories ? cat : [])
-  //         }
-  //       } else {
-  //         return cat;
-  //       }
-  //     });
-  //     const accordionMenu: Menu = {
-  //       name: type.name,
-  //       active: false,
-  //       iconClass: 'fa fa-code',
-  //       submenu: type.subcategories
-  //     }
-
-  //     return accordionMenu
-
-  //   } else {
-  //     return type;
-  //   }
-  // }
 
 }

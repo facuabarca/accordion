@@ -1,6 +1,6 @@
 import { ContentChild, EventEmitter, Output, TemplateRef } from '@angular/core';
 import { Component, OnInit, Input } from '@angular/core';
-import { Config, Menu } from '../accordion/types';
+import { Config, Menu } from './types';
 @Component({
   selector: 'app-collapsible',
   templateUrl: './collapsible.component.html',
