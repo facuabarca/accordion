@@ -11,10 +11,7 @@ import { CollapsibleHelper } from './collapsible.helper';
 })
 export class CollapsibleWrapperComponent implements OnInit {
 
-
-
   @ContentChild(TemplateRef) templateWrapper: TemplateRef<any>;
-  
 
   @Input() itemsToCollapse: any[];
   @Input() config: Config;
@@ -30,12 +27,10 @@ export class CollapsibleWrapperComponent implements OnInit {
       this.config = { multi: false };
     }
 
-    
   }
   
   ngOnInit(): void {
     this.prepareItems();
-    console.log(this.collapsibleWrapper);
   }
 
   prepareItems(): void {
@@ -46,14 +41,13 @@ export class CollapsibleWrapperComponent implements OnInit {
   }
 
   toggle(index): void {
-    console.log(this.config);
+
     if (!this.config.multi) {
       this.collapsibleWrapper?.childrens.filter(
         (children, i) => i !== index && children.active
       ).forEach(children => children.active = !children.active);
     }
 
-    // Menu의 active를 반전
     this.collapsibleWrapper.childrens[index].active = !this.collapsibleWrapper.childrens[index].active;
   }
 
